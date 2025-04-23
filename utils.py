@@ -9,8 +9,6 @@ from torchvision.models.detection.mask_rcnn import MaskRCNNPredictor
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import precision_score, recall_score
 import cv2
 
 
