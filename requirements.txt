@@ -8,7 +8,6 @@ pycocotools.coco
 torchvision.models.detection.mask_rcnn
 torchvision.models.detection.faster_rcnn
 pycocotools.cocoeval
-sklearn.metrics
 sklearn.preprocessing
 cv2
 torchvision.transforms
