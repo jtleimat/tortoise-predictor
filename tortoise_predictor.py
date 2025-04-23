@@ -5,23 +5,11 @@ import torch
 import utils
 from utils import (
     get_model_instance_segmentation,
-    collate_fn,
-    get_transform,
-    myOwnDataset,
-    evaluate_model,
-    intersection_over_union,
 )
 
 from torchvision.transforms import functional as F
-from sklearn.metrics import precision_score, recall_score
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
 import matplotlib.pyplot as plt
 from optparse import OptionParser
-from pycocotools.cocoeval import COCOeval
-from pycocotools.coco import COCO
-from sklearn.metrics import precision_recall_curve
 import numpy as np
 import matplotlib.patches as patches
 import matplotlib as mpl
@@ -36,13 +24,13 @@ parser.add_option("-i", "--skip_image",
         action="store_true", default=False)
 parser.add_option("-p", "--path_to_images",
         help="Path to text file of images",
-        default="/Users/jacquelyntleimat/Documents/TAMUCCPhD/Cameras/imagelist.txt")
+        default="/FILEPATH/imagelist.txt")
 parser.add_option("-o", "--output_for_predictions",
         help="File to store model predictions",
-        default="/Users/jacquelyntleimat/Documents/TAMUCCPhD/Cameras/testwexp12t6b.txt")
+        default="/FILEPATH/modelresults.txt")
 parser.add_option("-t", "--threshold_value",
         help="Threshold for model confidence value",
-        default=0.85)
+        default=0.5)
 
 (options, args) = parser.parse_args()
 skip_image=options.skip_image
@@ -51,7 +39,7 @@ output_for_predictions=options.output_for_predictions
 threshold_value=options.threshold_value
 
 # Options
-model_file = "/Users/jacquelyntleimat/Documents/TAMUCCPhD/Cameras/temp/exp12epoch250.keras"
+model_file = "/FILEPATH/tortoisemodel.keras"
 
 # Load model
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
@@ -124,3 +112,4 @@ for img_file in img_files:
 			plt.show()
 
 #Predictions set to save above
+print("Predictions Completed")
