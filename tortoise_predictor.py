@@ -39,7 +39,7 @@ output_for_predictions=options.output_for_predictions
 threshold_value=options.threshold_value
 
 # Options
-model_file = "/FILEPATH/tortoisemodel.keras"
+model_file = "tortoisemodel.keras"
 
 # Load model
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
