@@ -28,9 +28,11 @@ Also, if the images are not in the 'Tortoise' folder, you will need to add the f
 But, if it is in a folder in Documents (/Documents/CameraTraps/Cam1) you need to add this before each image file. In the text file, each image would need to look like /Documents/CameraTraps/Cam1/IMG_001.png 
 
 Also you will need to change the step to:
-`find [enter filepath here] *.png > imagelist.txt`
+`realpath [enter filepath here] *.png > imagelist.txt`
 
-Step 4. Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
+Step 4. Check that the text file is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
+
+Step 5. Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
 
 On Mac:
 `python3 -m venv venv_name`
@@ -39,7 +41,7 @@ On Windows:
 `py -m venv venv_name`
 
 
-Step 5. Run the virtual environment. This needs to be done every time you run the tortoise predictor.
+Step 6. Run the virtual environment. This needs to be done every time you run the tortoise predictor.
 
 On Mac:
 `source venv_name/bin/activate`
@@ -48,12 +50,12 @@ On Windows:
 `venv_name\Scripts\activate`
 
 
-Step 6. Install the required package. This only needs to be done once. 
+Step 7. Install the required package. This only needs to be done once. 
 
 On Mac and Windows:
 `pip3 install -r requirements.txt`
 
-Step 7. Run the tortoise predictor.
+Step 8. Run the tortoise predictor.
 
 On Mac:
 `python3 tortoise_predictor.py -i True`
@@ -61,7 +63,9 @@ On Mac:
 On Windows:
 `py tortoise_predictor.py -i True`
 
-The predicted tortoises will be put in a text file titled modelresults.txt.
+When done, you will see 'Predictions Completed' printed on terminal/command line.
+
+The predicted tortoises will be put in a text file default titled modelresults.txt.
 The results will look something like:
 /Users/jtleimat/Documents/Cameras/testimages/vlcsnap-2024-01-08-12h08m59s877.png
   Prediction 1: bbox = tensor([  5.2013, 643.9755, 172.3244, 739.5422]), score = 0.9967920184135437
@@ -80,7 +84,7 @@ On Windows:
 The results are now in modelresults2.txt
 
 
-Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
+How to view predictions: Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
 
 If you do want to preview the images, I would recommend doing no more than 50 images at a time. All you need to do is remove the '-i True' to enable the code to display the predictions:
 
@@ -90,15 +94,19 @@ On Mac:
 On Windows:
 `py tortoise_predictor.py`
 
+If you do this, a new window will appear opening matplot. You will have to click the 'x' on the new window to toggle through each of the images the script is reading.
 
-The confidence of the model can also be toggled. It is set to output predictions whenever the model is at least 50% confident there is a tortoise. This number can be raised or lowered. 
 
-Example to switch the confidence to 80%, this is what you would do:
+Changing Confidence Levels: The confidence of the model can also be toggled. It is set to output predictions whenever the model is at least 50% confident there is a tortoise. This number can be raised or lowered. 
+
+Example to switch the confidence to 80%, you would add -t 0.8 (or change the 0.8 to whatever confidence threshold you want the model to operate at):
 
 On Mac:
 `python3 tortoise_predictor.py -i True -t 0.8`
 
 On Windows:
 `py tortoise_predictor.py -i True -t 0.8`
+
+
 
 Thank you and feel free to email if you have questions (jackietleimat@gmail.com)
