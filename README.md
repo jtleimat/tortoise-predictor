@@ -16,12 +16,15 @@ On Windows:
 
 Step 3. Create a .txt file that lists the location of all images you want to run through the tortoise predictor. To do this, in mac terminal, you will use the following command:
 
-`find [path to folder containing images] -type f | sort > imagelist.txt`
+`find *.png > imagelist.txt`
 
-NOTE: If the images are not in the 'Tortoise' folder, you will need to add the folder path before the file name. Example: IMG_001.png, if in the 'Tortoise' folder, is fine as is.
+NOTE: If your images are not .png, you will just change *.png to *.jpg or *.jpeg
+Also, if the images are not in the 'Tortoise' folder, you will need to add the folder path before the file name. Example: IMG_001.png, if in the 'Tortoise' folder, is fine as is.
 
 But, if it is in a folder in Documents (/Documents/CameraTraps/Cam1) you need to add this before each image file. In the text file, each image would need to look like /Documents/CameraTraps/Cam1/IMG_001.png 
 
+Also you will need to change the step to:
+`find [enter filepath here] *.png > imagelist.txt`
 
 Step 4. Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
 
