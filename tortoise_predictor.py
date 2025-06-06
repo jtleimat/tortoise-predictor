@@ -24,10 +24,10 @@ parser.add_option("-i", "--skip_image",
         action="store_true", default=True)
 parser.add_option("-p", "--path_to_images",
         help="Path to text file of images",
-        default="imagelist.txt")
+        default="/imagelist.txt")
 parser.add_option("-o", "--output_for_predictions",
         help="File to store model predictions",
-        default="modelresults.txt")
+        default="/modelresults.txt")
 parser.add_option("-t", "--threshold_value",
         help="Threshold for model confidence value",
         default=0.5)
