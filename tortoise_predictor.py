@@ -21,7 +21,7 @@ import torchvision
 parser = OptionParser()
 parser.add_option("-i", "--skip_image",
         help="Skip showing each result image",
-        action="store_true", default=True)
+        action="store_true", default=False)
 parser.add_option("-p", "--path_to_images",
         help="Path to text file of images",
         default="imagelist.txt")
