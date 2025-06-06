@@ -104,9 +104,9 @@ for img_file in img_files:
 				color = colormaps.get_cmap('RdYlGn')(score)
 		
 				# Add bounding boxes to plot
-				rect = patches.Rectangle((bbox_int[0], bbox_int[1]), bbox_int[2] - bbox_int[0], bbox_int[3] - bbox_int[1], linewidth=1, edgecolor=color, facecolor='none')
+				rect = patches.Rectangle((bbox_int[0], bbox_int[1]), bbox_int[2] - bbox_int[0], bbox_int[3] - bbox_int[1], linewidth=1.5, edgecolor=color, facecolor='none')
 				axs.add_patch(rect)
-				axs.text(bbox_int[0], bbox_int[1], f'{score:.2f}', fontsize=5, color='white', bbox=dict(facecolor=color, alpha=0.5))
+				axs.text(bbox_int[0], bbox_int[1], f'Tortoise: {score:.2f}', fontsize=5, color='white', bbox=dict(facecolor=color, alpha=0.5))
 		
 		if not skip_image:
 			plt.show()
