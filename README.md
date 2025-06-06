@@ -23,14 +23,16 @@ On Windows:
 `...`
 
 NOTE: If your images are not .png, you will just change *.png to *.jpg or *.jpeg
-Also, if the images are not in the 'Tortoise' folder, you will need to add the folder path before the file name. Example: IMG_001.png, if in the 'Tortoise' folder, is fine as is.
 
-But, if it is in a folder in Documents (/Documents/CameraTraps/Cam1) you need to add this before each image file. In the text file, each image would need to look like /Documents/CameraTraps/Cam1/IMG_001.png 
+If your images are not in the same folder as your working directory, you will need to change the step to:
+`realpath [enter relative filepath here] *.png > imagelist.txt`
 
-Also you will need to change the step to:
-`realpath [enter filepath here] *.png > imagelist.txt`
+Example, if my images are in /Users/jtleimat/Documents/CameraTraps/Cam1, I would code as:
+`realpath /Users/jtleimat/Documents/CameraTraps/Cam1/ *.png > imagelist.txt`
 
-Step 4. Check that the text file is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
+Step 4. Check that the text file you created is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
+
+If your images are not in the working directory, the text file will have been deposited in that folder, so you will need to move it back to the working directory.
 
 Step 5. Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
 
