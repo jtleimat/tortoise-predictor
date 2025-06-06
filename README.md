@@ -20,7 +20,7 @@ On Mac:
 `realpath *.png > imagelist.txt`
 
 On Windows:
-`dir *.png > imagelist.txt`
+`...`
 
 NOTE: If your images are not .png, you will just change *.png to *.jpg or *.jpeg
 Also, if the images are not in the 'Tortoise' folder, you will need to add the folder path before the file name. Example: IMG_001.png, if in the 'Tortoise' folder, is fine as is.
@@ -61,8 +61,15 @@ On Mac:
 On Windows:
 `py tortoise_predictor.py -i True`
 
-The predicted tortoises will be put in a text file titled modelresults.txt
-Note, if you are running this more than once, you will need to change the name of the output file. To do this add -o after the tortoise predictor and follow the -o with a new txt file name. Example:
+The predicted tortoises will be put in a text file titled modelresults.txt.
+The results will look something like:
+/Users/jtleimat/Documents/Cameras/testimages/vlcsnap-2024-01-08-12h08m59s877.png
+  Prediction 1: bbox = tensor([  5.2013, 643.9755, 172.3244, 739.5422]), score = 0.9967920184135437
+The first line displays the image in reference.
+The second line displays information related to the prediction. If there are multiple predictions in an image, it will list more predictions. If there are no predictions, the file name will not be printed.
+bbox is the approximate coordinates of the predicted tortoise on the image, and score is how confident the model is in the prediction. The closer to 1, the more confident it is. To see where the prediction is, I would recommend running the files from this list through the predictor and have the code display the images (more on this later).
+
+Note, if you are running this more than once, you will want to change the name of the output file. To do this add -o after the tortoise predictor and follow the -o with a new txt file name. Example:
 
 On Mac:
 `python3 tortoise_predictor.py -o modelresults2.txt`
