@@ -14,9 +14,13 @@ On Windows:
 `cd Desktop\Tortoise`
 
 
-Step 3. Create a .txt file that lists the location of all images you want to run through the tortoise predictor. To do this, in mac terminal, you will use the following command:
+Step 3. Create a .txt file that lists the location of all images you want to run through the tortoise predictor.
 
+On Mac:
 `find *.png > imagelist.txt`
+
+On Windows:
+`dir *.png > imagelist.txt`
 
 NOTE: If your images are not .png, you will just change *.png to *.jpg or *.jpeg
 Also, if the images are not in the 'Tortoise' folder, you will need to add the folder path before the file name. Example: IMG_001.png, if in the 'Tortoise' folder, is fine as is.
