@@ -17,7 +17,7 @@ On Windows:
 Step 3. Create a .txt file that lists the location of all images you want to run through the tortoise predictor.
 
 On Mac:
-`find *.png > imagelist.txt`
+`realpath *.png > imagelist.txt`
 
 On Windows:
 `dir *.png > imagelist.txt`
@@ -56,10 +56,10 @@ On Mac and Windows:
 Step 7. Run the tortoise predictor.
 
 On Mac:
-`python3 tortoise_predictor.py`
+`python3 tortoise_predictor.py -i True`
 
 On Windows:
-`py tortoise_predictor.py`
+`py tortoise_predictor.py -i True`
 
 The predicted tortoises will be put in a text file titled modelresults.txt
 Note, if you are running this more than once, you will need to change the name of the output file. To do this add -o after the tortoise predictor and follow the -o with a new txt file name. Example:
@@ -73,15 +73,15 @@ On Windows:
 The results are now in modelresults2.txt
 
 
-Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default is set to False because it will bog down your computer to try and display each of these images. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
+Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
 
-If you do want to preview the images, you would swich the setting:
+If you do want to preview the images, I would recommend doing no more than 50 images at a time. All you need to do is remove the '-i True' to enable the code to display the predictions:
 
 On Mac:
-`python3 tortoise_predictor.py -i False`
+`python3 tortoise_predictor.py`
 
 On Windows:
-`py tortoise_predictor.py -i False`
+`py tortoise_predictor.py`
 
 
 The confidence of the model can also be toggled. It is set to output predictions whenever the model is at least 50% confident there is a tortoise. This number can be raised or lowered. 
@@ -89,9 +89,9 @@ The confidence of the model can also be toggled. It is set to output predictions
 Example to switch the confidence to 80%, this is what you would do:
 
 On Mac:
-`python3 tortoise_predictor.py -t 0.8`
+`python3 tortoise_predictor.py -i True -t 0.8`
 
 On Windows:
-`py tortoise_predictor.py -t 0.8`
+`py tortoise_predictor.py -i True -t 0.8`
 
 Thank you and feel free to email if you have questions (jackietleimat@gmail.com)
