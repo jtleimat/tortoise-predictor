@@ -2,7 +2,7 @@ os
 torch
 numpy
 torchvision
-PIL
+pillow
 pycocotools
 torchvision.models.detection.mask_rcnn
 torchvision.models.detection.faster_rcnn
