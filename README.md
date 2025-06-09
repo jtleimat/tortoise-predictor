@@ -89,7 +89,7 @@ The results are now in modelresults2.txt
 
 How to view predictions: Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
 
-If you do want to preview the images, I would recommend doing no more than 50 images at a time. All you need to do is remove the '-i True' to enable the code to display the predictions:
+If you want to preview the images, I would recommend doing no more than 50 images at a time. All you need to do is remove the '-i True' to enable the code to display the predictions:
 
 On Mac:
 `python3 tortoise_predictor.py`
@@ -97,7 +97,7 @@ On Mac:
 On Windows:
 `py tortoise_predictor.py`
 
-If you do this, a new window will appear opening matplot. You will have to click the 'x' on the new window to toggle through each of the images the script is reading.
+If you do this, a new window will appear opening matplot. You will have to click the 'x' on the new window to progress to each image. The magnifying glass on the bottom will allow you to zoom in on the predictons.
 
 
 Changing Confidence Levels: The confidence of the model can also be toggled. It is set to output predictions whenever the model is at least 50% confident there is a tortoise. This number can be raised or lowered. 
