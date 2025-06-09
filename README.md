@@ -65,7 +65,7 @@ On Mac:
 On Windows:
 `py tortoise_predictor.py -i True`
 
-When done, you will see 'Predictions Completed' printed on terminal/command line.
+For each image, you will see "Image: 1" and a 4 below it while it is processing on the screen. When done, you will see 'Predictions Completed' printed on terminal/command line.
 
 The predicted tortoises will be put in a text file default titled modelresults.txt.
 The results will look something like:
