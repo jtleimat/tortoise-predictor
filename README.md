@@ -30,7 +30,7 @@ If your images are not in the same folder as your working directory, you will ne
 Example, if my images are in /Users/jtleimat/Documents/CameraTraps/Cam1, I would code as:
 `realpath /Users/jtleimat/Documents/CameraTraps/Cam1/ *.png > imagelist.txt`
 
-**Step 4.** Check that the text file you created is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
+**Step 4.** Check that the text file you created is just the images you want. It will add in any .pngs which may include content from the packages installed for processing. Most commonly, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space. If you don't, you'll get an error that says 'AttributeError: 'str' object has no attribute 'seek'' at the very end of processing. But this will not cause any problem with processing otherwise.
 
 If your images are not in the working directory, the text file will have been deposited in that folder, so you will need to move it back to the working directory.
 
