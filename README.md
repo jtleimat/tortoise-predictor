@@ -20,7 +20,7 @@ On Mac:
 `realpath *.png > imagelist.txt`
 
 On Windows:
-`...`
+`dir /s /b /a-d "*.png" > imagelist.txt`
 
 NOTE: If your images are not .png, you will just change *.png to *.jpg or *.jpeg
 
