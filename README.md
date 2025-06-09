@@ -2,10 +2,10 @@
 
 Current contents you will find include the model, the requirements script, the utility script, and the script to run the tortoise predictor. You will need to download all of these files. The model will likely need to be downloaded separately due to its large size. If the downloaded model says 0 bytes, it did not download properly. I'd recommend moving all of these files onto the desktop of your computer in one folder. The instructions will assume you have moved a folder of all files onto your desktop in a folder named 'Tortoise'
 
-Step 1. Prior to running this script, you will need to download python to your device. [You can download Python here](https://www.python.org/downloads/).
+**Step 1.** Prior to running this script, you will need to download python to your device. [You can download Python here](https://www.python.org/downloads/).
 
 
-Step 2. Open terminal (on mac) or command line (on windows) and set your working directory. This will be where you moved the files from this repository.
+**Step 2.** Open terminal (on mac) or command line (on windows) and set your working directory. This will be where you moved the files from this repository.
 
 On Mac:
 `cd Desktop/Tortoise`
@@ -14,7 +14,7 @@ On Windows:
 `cd Desktop\Tortoise`
 
 
-Step 3. Create a .txt file that lists the location of all images you want to run through the tortoise predictor.
+**Step 3.** Create a .txt file that lists the location of all images you want to run through the tortoise predictor.
 
 On Mac:
 `realpath *.png > imagelist.txt`
@@ -30,11 +30,11 @@ If your images are not in the same folder as your working directory, you will ne
 Example, if my images are in /Users/jtleimat/Documents/CameraTraps/Cam1, I would code as:
 `realpath /Users/jtleimat/Documents/CameraTraps/Cam1/ *.png > imagelist.txt`
 
-Step 4. Check that the text file you created is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
+**Step 4.** Check that the text file you created is just a list of file paths. Most commonly on terminal, one extra space will be added at the very end of the file. You can just hit delete to remove that extra space.
 
 If your images are not in the working directory, the text file will have been deposited in that folder, so you will need to move it back to the working directory.
 
-Step 5. Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
+**Step 5.** Create a virtual environment. This will allow you to download the packages to run the predictor without changing anything on your personal computer. And only needs to be done once. If you are running through another set of images, you can skip this step after the first time. To do this follow these steps:
 
 On Mac:
 `python3 -m venv venv_name`
@@ -43,7 +43,7 @@ On Windows:
 `py -m venv venv_name`
 
 
-Step 6. Run the virtual environment. This needs to be done every time you run the tortoise predictor.
+**Step 6.** Run the virtual environment. This needs to be done every time you run the tortoise predictor.
 
 On Mac:
 `source venv_name/bin/activate`
@@ -52,12 +52,12 @@ On Windows:
 `venv_name\Scripts\activate`
 
 
-Step 7. Install the required package. This only needs to be done once. 
+**Step 7.** Install the required package. This only needs to be done once. 
 
 On Mac and Windows:
 `pip3 install -r requirements.txt`
 
-Step 8. Run the tortoise predictor.
+**Step 8.** Run the tortoise predictor.
 
 On Mac:
 `python3 tortoise_predictor.py -i True`
@@ -86,7 +86,7 @@ On Windows:
 
 The results are now in modelresults2.txt
 
-Step 9. Type and enter 'Exit' to leave the virtual environment. And type and enter 'exit' again to finish running code in terminal/command line.
+**Step 9.** Type and enter 'Exit' to leave the virtual environment. And type and enter 'exit' again to finish running code in terminal/command line.
 
 How to view predictions: Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
 
