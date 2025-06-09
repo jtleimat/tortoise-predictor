@@ -86,6 +86,7 @@ On Windows:
 
 The results are now in modelresults2.txt
 
+Step 9. Type and enter 'Exit' to leave the virtual environment. And type and enter 'exit' again to finish running code in terminal/command line.
 
 How to view predictions: Within the tortoise predictor, there are several changeable factors. Most important is the display images. The default code skips the images so it will not bog down your computer memory. Instead, the output will be a txt file that lists all of the images that the model predicts a tortoise to be in and how confident the model is in these predictions.
 
